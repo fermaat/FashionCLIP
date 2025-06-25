@@ -61,7 +61,7 @@ This project enhances this by adding a semi-positive term, which helps the model
 ## Project Structure
 The repository is organized into research notebooks and production-ready scripts:
 
-**/notebooks**: Contains the original research and experiments.
+- **/notebooks**: Contains the original research and experiments.
     - `01_generate_triplet_input.ipynb`: Initial exploration of data generation.
     - `02_triplet_training_new_metric.ipynb`: Research on improving the training metric/loss.
 - **/src**: Contains the cleaned, modular, and reusable code.
