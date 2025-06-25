@@ -53,10 +53,21 @@ L(a, p, n) = \max \left( d(E_a, E_p) - d(E_a, E_n) + \alpha,\, 0 \right)
 ```
 Where:
 
-$E_a$, $E_p$, $E_n$ are the embeddings for the anchor, positive, and negative.
-$d$ is a distance function (e.g., Euclidean distance).
-$\alpha$ is the margin.
+- $E_a$, $E_p$, $E_n$ are the embeddings for the anchor, positive, and negative.
+- $d$ is a distance function (e.g., Euclidean distance).
+- $\alpha$ is the margin.
+
 This project enhances this by adding a semi-positive term, which helps the model learn finer-grained distinctions. The loss encourages the semi-positive to be further away than the positive but closer than the negative.
+
+```math
+        \ell(a, p, n) = L = \{l_1,\dots,l_N\}^\top, \quad
+        l_i = \max \{d(a_i, p_i) + sp - d(a_i, n_i) + {\rm margin}, 0\}
+```
+
+
+    Reference:
+        V. Balntas, et al.: [Learning shallow convolutional feature descriptors with triplet losses](http://www.bmva.org/bmvc/2016/papers/paper119/index.html):
+        
 
 ## Project Structure
 The repository is organized into research notebooks and production-ready scripts:
