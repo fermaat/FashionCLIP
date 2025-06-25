@@ -48,9 +48,9 @@ The model is a Siamese-like network. The same core image encoder processes the a
 ## 3. Training with Triplet Loss
 
 The network is trained using a custom triplet loss function defined in losses.py. The standard triplet loss aims to minimize the distance between the anchor and positive while maximizing the distance between the anchor and negative. The formula is:
-$$
+```math
 L(a, p, n) = \max \left( d(E_a, E_p) - d(E_a, E_n) + \alpha,\, 0 \right)
-$$
+```
 Where:
 
 $E_a$, $E_p$, $E_n$ are the embeddings for the anchor, positive, and negative.
